@@ -28,3 +28,15 @@ adb logcat
 # アクティビティモニター
 ## Activity starting: com.hoge.fuga
 adb shell am monitor
+
+# 起動中の Activity を見る
+adb shell dumpsys activity | grep -B 1 "Run #[0-9]*:"
+
+# Viewツリーを見る
+adb shell dumpsys activity top
+
+# Alarmの設定を見る
+adb shell dumpsys alarm
+
+# DBのクエリ確認する
+adb shell dumpsys dbinfo
